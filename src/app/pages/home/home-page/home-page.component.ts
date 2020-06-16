@@ -35,22 +35,22 @@ export class HomePageComponent implements OnInit {
   public euroSafeImages: IAlbum[] = [
     {
       src: "../assets/img/yenimahalle-star.png",
-      caption: "Sezin Tıp Yenimahalle Euro Safe Imaging Star",
+      caption: "Sezin Tip Yenimahalle Euro Safe Imaging Star",
       thumb: "../assets/img/yenimahalle-star.png",
     },
     {
       src: "../assets/img/aksaray-star.png",
-      caption: "Sezin Tıp Aksaray Euro Safe Imaging Star",
+      caption: "Sezin Tip Aksaray Euro Safe Imaging Star",
       thumb: "../assets/img/aksaray-star.png",
     },
     {
       src: "../assets/img/eregli-star.png",
-      caption: "Sezin Tıp Ereğli Euro Safe Imaging Star",
+      caption: "Sezin Tip Eregli Euro Safe Imaging Star",
       thumb: "../assets/img/eregli-star.png",
     },
     {
       src: "../assets/img/gmk-star.png",
-      caption: "Sezin Tıp Gazi Mustafa Kemal Euro Safe Imaging Star",
+      caption: "Sezin Tip Gazi Mustafa Kemal Euro Safe Imaging Star",
       thumb: "../assets/img/gmk-star.png",
     },
   ];

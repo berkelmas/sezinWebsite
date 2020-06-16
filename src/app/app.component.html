@@ -31,6 +31,73 @@
       </div>
 
       <section class="navbar-mobile">
+        <span class="navbar-divider d-mobile-none"></span>
+
+        <ul class="nav nav-navbar ml-auto">
+          <a (click)="mobileState = false" class="nav-link" routerLink="/"
+            >ANA SAYFA</a
+          >
+          <li class="nav-item">
+            <a
+              [routerLink]="!mobileState ? '/about' : null"
+              (click)="openSubMenu('about')"
+              class="nav-link"
+              >HAKKIMIZDA <span class="arrow"></span
+            ></a>
+            <ul
+              class="nav"
+              [style.display]="
+                openedSubMenu === 'about' || !mobileState ? 'block' : 'none'
+              "
+            >
+              <li class="nav-item">
+                <a
+                  (click)="mobileState = false"
+                  class="nav-link"
+                  routerLink="/about"
+                  >Sezin Tıp Hakkında</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  (click)="mobileState = false"
+                  class="nav-link"
+                  routerLink="/about/bgys-policy"
+                  >BGYS Politikamız</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  (click)="mobileState = false"
+                  class="nav-link"
+                  routerLink="/about"
+                  >Kalite Belgelerimiz</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  (click)="mobileState = false"
+                  class="nav-link"
+                  routerLink="/about"
+                  >Basında Biz</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <a (click)="mobileState = false" class="nav-link" routerLink="process"
+            >SÜREÇ</a
+          >
+          <a (click)="mobileState = false" class="nav-link" routerLink="career"
+            >KARİYER</a
+          >
+          <a (click)="mobileState = false" class="nav-link" routerLink="contact"
+            >İLETİŞİM</a
+          >
+        </ul>
+      </section>
+      <!-- 
+      <section class="navbar-mobile">
         <nav class="nav nav-navbar ml-auto">
           <a (click)="mobileState = false" class="nav-link" routerLink="/"
             >ANA SAYFA</a
@@ -48,7 +115,7 @@
             >İLETİŞİM</a
           >
         </nav>
-      </section>
+      </section> -->
     </div>
   </nav>
   <!-- /.navbar -->
