@@ -1,0 +1,106 @@
+<header
+  class="header text-white"
+  style="background-image: url(../assets/img/bg/4.jpg);"
+  data-overlay-light="2"
+>
+  <div class="container text-center">
+    <div class="row">
+      <div data-aos="fade-up" class="col-md-8 mx-auto">
+        <h1 style="color: #484848;">İletişim</h1>
+        <p style="color: #484848;" class="lead-2 opacity-90 mt-6">
+          Bize Ulaşın
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section data-aos="fade-left" class="section wrapped-section">
+  <div class="container">
+    <div class="row gap-y">
+      <div class="col-lg-6">
+        <h3>İletişime Geç</h3>
+        <br />
+
+        <form (submit)="handleSubmit()" #contactForm="ngForm">
+          <div *ngIf="successState" class="alert alert-success">
+            Mesajınız başarı ile iletildi. Size kısa sürede geri döneceğiz.
+          </div>
+
+          <div *ngIf="failState" class="alert alert-danger">
+            Mesaj iletiminde hata meydana geldi.
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                name="name"
+                [(ngModel)]="name"
+                placeholder="İsim-Soyisim"
+                required
+              />
+            </div>
+
+            <div class="form-group col-md-6">
+              <input
+                class="form-control form-control-lg"
+                type="email"
+                name="email"
+                [(ngModel)]="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea
+              class="form-control form-control-lg"
+              rows="4"
+              [(ngModel)]="message"
+              placeholder="Mesaj"
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            class="btn btn-lg btn-primary d-flex justify-content-center align-items-center"
+            type="submit"
+          >
+            <div *ngIf="loadingState" class="lds-dual-ring"></div>
+            <span *ngIf="!loadingState">Gönder</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-lg-5 ml-auto text-center text-lg-left">
+        <hr class="d-lg-none" />
+        <h3>Konum</h3>
+        <br />
+        <p>
+          Mustafa Kemal Mah<br />2146. Sok Metkay Plaza No :17 / 10 <br />
+          Çankaya / Ankara
+        </p>
+        <p>+90 312 514 88 88</p>
+        <p>contact@bkbsoft.com</p>
+        <!--
+        <div class="fw-400">Follow Us</div>
+        <div class="social social-sm social-inline">
+          <a
+            class="social-facebook"
+            href="https://www.facebook.com/digitalarchitects1/"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="social-twitter"
+            href="https://www.linkedin.com/company/digitarc/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</section>

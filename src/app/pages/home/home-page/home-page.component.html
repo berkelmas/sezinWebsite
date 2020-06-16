@@ -1,0 +1,174 @@
+<!-- Header -->
+<header
+  class="header h-fullscreen"
+  style="background-image: url(../assets/img/main-page.png);"
+>
+  <div
+    class="overlay opacity-95"
+    style="
+      background-image: linear-gradient(
+        135deg,
+        #fff 0%,
+        #fff 40%,
+        transparent 100%
+      );
+    "
+  ></div>
+  <div data-aos="fade-up" class="container">
+    <div class="row align-items-center h-100">
+      <div class="col-md-8 col-lg-6">
+        <h1 class="display-4"><strong>Sezin Tıbbi Görüntüleme</strong></h1>
+        <p class="lead-2 mt-5 mb-8">
+          {{ currentYear }} tarihi itibari ile <strong>17 Şehirde</strong>,
+          toplam <strong>39 Hastanede</strong>,
+          <strong>5 Bölge Müdürlüğü</strong> ve
+          <strong>293 çalışanı</strong> ile hizmet vermeye devam etmektedir.
+        </p>
+        <p class="gap-xy">
+          <a class="btn btn-xl btn-round btn-primary mw-200" routerLink="about"
+            >DAHA FAZLA</a
+          >
+          <a
+            class="btn btn-xl btn-round btn-outline-primary mw-200"
+            routerLink="contact"
+            >İLETİŞİM</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /.header -->
+
+<!-- Main Content -->
+<main class="main-content">
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Products
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <section data-aos="fade-up" class="section bg-gray">
+    <div class="container">
+      <div class="row gap-y align-items-center">
+        <div class="col-md-6 text-center text-md-right">
+          <p class="small-2 text-uppercase text-lightest fw-500 ls-1">
+            SEZİN TIP
+          </p>
+          <h3 class="fw-500">Sezin Tıbbi Görüntüleme</h3>
+          <br />
+          <p>
+            <strong
+              >Sezin Tıbbi Görüntüleme Ve Kalp Merkezi Limited Şirketi
+            </strong>
+            2003 yılında kurulmuştur. İlk faaliyet konusu Radyoloji Hizmet
+            Alımı, Kardiyoloji Dal Tıp Merkezi ve Kalp Damar Cerrahi Hizmet
+            alımı olmuştur. 2008 yılına kadar daha çok Kardiyoloji ve Kalp Damar
+            cerrahisi Hizmetlerinde faaliyet gösteren firmamız, Radyoloji
+            alanında büyüme kararı almış olup bu tarihte Tıp Merkezi de dâhil
+            olmak üzere Kalp/Kardiyoloji/Tıp Merkezi yatırımı satılarak, sadece
+            Radyoloji alanında yoluna devam etmektedir.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <img
+            class="rounded-md ml-md-4 shadow-lg"
+            src="../assets/img/main-page-mr.png"
+            alt="Sezin Tıbbi Görüntüleme Ceyhan MR"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up" class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="small-2 text-uppercase text-lightest fw-500 ls-1">
+          KALİTE BELGELERİ
+        </p>
+        <h2>Ödüllerimiz</h2>
+        <p class="lead"></p>
+      </header>
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+      >
+        <div
+          *ngFor="let img of euroSafeImages; let index = index"
+          ngxSlickItem
+          class="slide m-2 shadow"
+        >
+          <img
+            class="slide-img"
+            [src]="img.src"
+            [alt]="img.caption"
+            (click)="openLightbox(index)"
+          />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+
+  <section data-aos="fade-up" class="section bg-gray p-0">
+    <div class="container-wide">
+      <div class="row no-gutters">
+        <div
+          class="col-md-4 bg-img"
+          style="
+            background-image: url(../assets/img/sezin-logo-image-2.png);
+            min-height: 300px;
+          "
+        ></div>
+
+        <div class="col-md-8 p-6 p-md-8">
+          <h4>Hedefimiz insanlara daha sağlıklı bir gelecek hazırlamak</h4>
+
+          <p>
+            Bugün ülkenin dört bir yanında yeni sağlık ve yapı geliştirme
+            hizmetlerine, hep birlikte, Sezinli olmak ruhunu hiç kaybetmeden
+            odaklanan bir firma olarak, sürdürülebilir büyümeyi yakalayarak
+            ilerliyoruz. İnsanlarımızın sağlık sorunlarının çözümlerine inovatif
+            yaklaşımlarımızla yardımcı oluyor ve Sezin ailesi olarak bu
+            hizmetleri sunmaktan büyük gurur duyuyoruz.
+          </p>
+          <p>
+            Sezin ailesi, girişimci yapısı, akılcı stratejileri ve çeşitliliğe
+            verdiği önem ile birlikte teknoloji ve insan kaynaklarına gereken
+            yatırımları gereken yer ve zamanlarda yaparak, dokunduğu her alanda
+            ve coğrafyada, dokunduğu her insanın hayatına kalıcı değerler katmak
+            amacıyla çalışmalarını sürdürmektedir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up" class="section py-6">
+    <div class="container">
+      <div class="partner partner-sm">
+        <img
+          src="../assets/img/saglik-bak-logo.png"
+          style="height: 60px;"
+          alt="TC Sağlık Bakanlığı"
+        />
+        <img
+          src="../assets/img/ge-logo.png"
+          style="height: 60px;"
+          alt="General Electric"
+        />
+        <img
+          src="../assets/img/siemens-logo.png"
+          style="height: 20px;"
+          alt="Siemens"
+        />
+        <img
+          src="../assets/img/philips-logo.png"
+          style="height: 30px;"
+          alt="Philips"
+        />
+      </div>
+    </div>
+  </section>
+</main>

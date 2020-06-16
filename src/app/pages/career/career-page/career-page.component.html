@@ -1,0 +1,82 @@
+<header
+  class="header text-white"
+  style="
+    background-image: url(../assets/img/about-picture.png);
+    background-position: center;
+  "
+  data-overlay-light="2"
+>
+  <div class="container text-center">
+    <div class="row">
+      <div data-aos="fade-up" class="col-md-8 mx-auto">
+        <h1 style="color: #484848;">Kariyer</h1>
+        <p style="color: #484848;" class="lead-2 opacity-90 mt-6">
+          Bizimle çalışmaya başlamak için buradan kariyer fırsatlarına göz
+          atabilirsiniz.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="section-open-positions">
+  <div class="container">
+    <header class="section-header">
+      <small>İŞLER</small>
+      <h2>Açık Pozisyonlar</h2>
+      <hr />
+      <p class="lead">
+        Aşağıdaki liste mevcut iş pozisyonlarını göstermektedir. Açık
+        pozisyonlar düzenli olarak güncellenmektedir.
+      </p>
+    </header>
+
+    <div
+      data-aos="fade-up"
+      *ngFor="let job of jobs; let iJob = index"
+      class="accordion accordion-connected shadow-5"
+    >
+      <div class="card">
+        <h6 class="card-title">
+          <a
+            class="d-flex align-items-center"
+            [class.collapsed]="!showState[iJob]"
+            data-toggle="collapse"
+            (click)="showState[iJob] = !showState[iJob]"
+            aria-expanded="false"
+            style="cursor: pointer;"
+          >
+            <strong class="mr-auto">Kıdemli Backend Yazılım Uzmanı</strong>
+            <span class="small text-lighter"
+              >Istanbul <i class="fa fa-map-marker ml-2"></i
+            ></span>
+          </a>
+        </h6>
+
+        <div
+          [@balloonEffect]="showState[iJob] ? 'open' : 'closed'"
+          class="card-body p-0"
+          style="transform-origin: 100% 0;"
+        >
+          <p class="p-4">
+            Siz de geleceğin teknolojilerini ülkemize kazandıran, dünyanın en
+            başarılı markalarının temsilciliğini başarıyla yürüten, şirket
+            başarısını çalışanlarının başarısı ile mümkün olduğuna inanan, bu
+            genç ve dinamik ekibin bir parçası olmak ve gelecek başarılarında
+            pay sahibi olmak ister misiniz? Aşağıdaki kriterleri sağlıyor veya
+            kendinizi bu konularda hızla geliştirebileceğinizi düşünüyorsanız
+            bizimle iletişime geçebilirsiniz.
+          </p>
+
+          <hr class="w-100px" />
+
+          <p class="text-center">
+            <a class="btn btn-lg btn-primary" routerLink="career-apply/123"
+              >Başvur</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

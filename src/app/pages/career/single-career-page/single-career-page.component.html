@@ -1,0 +1,187 @@
+<header
+  class="header text-dark bg-gray1 pt-10 pb-9"
+  style="background-image: linear-gradient(to right bottom, #f7f7f7, #f7f7f7);"
+>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1>Kıdemli Backend Yazılım Uzmanı</h1>
+        <p class="lead-2"><i class="fa fa-map-marker mr-2"></i> Istanbul</p>
+
+        <hr class="w-50px" />
+
+        <a
+          class="btn btn-xl btn-round btn-primary"
+          style="box-shadow: 0 0 15px rgba(98, 162, 248, 0.7);"
+          routerLink="."
+          fragment="section-apply"
+          >Hemen Başvur</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+  <!--
+  |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+  | Description
+  |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+  !-->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p class="lead">
+            Siz de geleceğin güvenlik teknolojilerini ülkemize kazandıran,
+            dünyanın en başarılı markalarının temsilciliğini başarıyla yürüten,
+            şirket başarısını çalışanlarının başarısı ile mümkün olduğuna
+            inanan, bu genç ve dinamik ekibin bir parçası olmak ve gelecek
+            başarılarında pay sahibi olmak ister misiniz? Aşağıdaki kriterleri
+            sağlıyor veya kendinizi bu konularda hızla geliştirebileceğinizi
+            düşünüyorsanız bizimle iletişime geçebilirsiniz.
+          </p>
+
+          <br /><br />
+          <h5>Yetkinlik ve Nitelikler</h5>
+          <ul>
+            <li>
+              İyi derecede JavaScript bilgisine sahip,
+            </li>
+            <li>
+              VueJS ve frontend teknolojileri konusunda tecrübeli,
+            </li>
+            <li>
+              HTML ve CSS konularına hakim,
+            </li>
+            <li>
+              Tarayıcı uyumluluğu ve responsive tasarım konusunda deneyimli,
+            </li>
+            <li>RESTful API ve tasarımı ve kullanımı konularında deneyimli,</li>
+          </ul>
+
+          <br />
+          <h5>Yan Haklar</h5>
+          <ul>
+            <li>
+              Yüksek lisans ve doktora programlarına katılım için teşvik.
+            </li>
+            <li>Patent başvuruları için teşvik.</li>
+            <li>Ticarileştirilebilir projeler için teşvik.</li>
+            <li>
+              Esnek çalışma saatleri.
+            </li>
+          </ul>
+
+          <br />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+  | Apply form
+  |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+  !-->
+  <section class="section" id="section-apply">
+    <div class="container">
+      <header class="section-header">
+        <small>BAŞVUR</small>
+        <h2>Pozisyona Başvur</h2>
+        <hr />
+        <p class="lead">
+          İş Başvurusu İçin Aşağıdaki Formu Doldurun. Sizinle En Kısa Sürede
+          İletişime Geçeceğiz.
+        </p>
+      </header>
+
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <form (submit)="handleSubmit()">
+            <input type="hidden" name="subject" value="[TheThemeio] : Resume" />
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="firstname"
+                  placeholder="Ad"
+                />
+              </div>
+
+              <div class="form-group col-12 col-md-6">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="lastname"
+                  placeholder="Soyad"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form-group col-12 col-md-6">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="phone"
+                  placeholder="Telefon"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                name="location"
+                placeholder="Konum"
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                name="linkedin_profile"
+                placeholder="Linkedin Profili"
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                name="portfolio"
+                placeholder="Portfolyo URL"
+              />
+            </div>
+
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="extra_information"
+                placeholder="Ek Bilgiler"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button class="btn btn-lg btn-block btn-primary" type="submit">
+              BAŞVUR
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
